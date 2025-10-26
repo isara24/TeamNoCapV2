@@ -1,0 +1,48 @@
+{
+  "include": ["src/**/*.ts", "src/**/*.tsx", "vite.config.ts"],
+  "exclude": ["agent/**/*", "node_modules"],
+  "compilerOptions": {
+    /* Language & environment */
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+
+    /* Module system (Vite / TS 5 bundler mode) */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+
+    /* Path alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Types */
+    "types": ["vite/client", "node"],
+
+    /* Interop niceties */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    /* Build behavior */
+    "noEmit": true,
+    "useDefineForClassFields": true,
+
+    /* Keep only critical type safety (your preference) */
+    "skipLibCheck": true,
+    "strict": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+
+    /* Lint-y checks off per your original */
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false,
+    "noUncheckedSideEffectImports": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false
+  }
+}
